@@ -27,7 +27,7 @@ url = "https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8?Nrpp=40&page=1"
 r = requests.get(url, headers = headers)
 soup = BeautifulSoup(r.text, 'lxml')
 
-#PART 1, QUESTION 5 ##This was not required in the submission but just adding here as it helped answer the question in Part1
+###This was not required in the submission but just adding here as it helped answer the question in Part1
 element = soup.select("div h3.product-info-title a")
 
 #printing titles
@@ -40,9 +40,9 @@ for example in element:
 
 import re
 
-#PART 2
-##Use the URL identified above and write code that loads the first page with 40 items per page of “B&N Top 100”.
-#1. a)
+
+##Using the URL identified above and writing code that loads the first page with 40 items per page of “B&N Top 100”.
+
 url= "https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8?Nrpp=40&page=1"
 #GET request to the url .
 page = requests.get(url,headers=headers).text
@@ -50,8 +50,8 @@ soup = BeautifulSoup(page, 'lxml') #parse html
 
 from urllib.parse import urlsplit
 
-#2. b)
-#create a list of each book’s product page URL. This list should be of length 40.
+
+#creating a list of each book’s product page URL. This list should be of length 40.
 
 #empty list to store links
 link = []
@@ -73,7 +73,7 @@ len(link)
 
 headers2={'User-Agent':'Mozilla/5.0 (Windows NT 6.3; Win 64 ; x64) Apple WeKit /537.36(KHTML , like Gecko) Chrome/80.0.3987.162 Safari/537.36'}
 
-#3. c)
+
 for url in range(len(link)): 
     response = requests.get(link[url], headers = headers)
     filename = 'BNTOP100_{}.html'.format(url+1) #naming files based on search result number
@@ -81,7 +81,7 @@ for url in range(len(link)):
         file.write(response.text)
     time.sleep(5) #Each page request will be followed by 5sec pause
 
-"""d) Write a separate piece of code that loops through the pages you downloaded in (c), opens and parses them into a Python or Java xxxxsoup-object. Next, access the “Overview” section of the page and print the first 100 characters of the overview text to screen."""
+""" a separate piece of code that loops through the pages you downloaded above, opens and parses them into a Python or Java xxxxsoup-object. Next, access the “Overview” section of the page and print the first 100 characters of the overview text to screen."""
 
 #4. d)
 for i in range(0,40): #we will create a for loop to loop through all 40 pages and get url
