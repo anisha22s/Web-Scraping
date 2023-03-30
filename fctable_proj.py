@@ -20,13 +20,13 @@ from urllib.parse import urlsplit
  
 
 """
-(2.2) 
-a) write code that automatically logs into the website fctables.com Links to an external site.
-b) Verify that you have successfully logged in:  use the cookies you received during log in and write code to access https://www.fctables.com/tipster/my_bets/ Links to an external site..  Check whether the word “Wolfsburg” appears on the page.  Don’t look for your username to confirm that you are logged in (it won’t work) and use this page’s content instead.
+
+we will write code that automatically logs into the website fctables.com Links to an external site.
+Then we will verify that we have successfully logged in:  use the cookies you received during log in and write code to access https://www.fctables.com/tipster/my_bets/ Links to an external site..  Check whether the word “Wolfsburg” appears on the page.  Don’t look for your username to confirm that you are logged in (it won’t work) and use this page’s content instead.
 """
 
 #referred to Professor's Flightware.py syntax from canvas to recreate this code
-def Q2A():
+def 2A():
       URL = "https://www.fctables.com/user/login/"
       page1 = requests.get(URL)
       doc1 = BeautifulSoup(page1.content, 'html.parser')
@@ -48,9 +48,9 @@ def Q2A():
                                   
       #get cookies
       cookies = session_requests.cookies.get_dict()
-Q2A()
+2A()
 
-#Q2.2 B continued here
+#2.2 B continued here
 # remain in session
 def main2():   
     page2 = session_requests.get("https://www.fctables.com/tipster/my_bets/",  cookies=cookies) #accessing bets website
