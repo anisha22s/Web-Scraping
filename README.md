@@ -18,7 +18,7 @@ This project contains code for accessing information from the Barnes and Noble w
 
 ## **Technologies Used**
 
-Python 3.8
+Python 3.8,
 Beautifulsoup 4
 
 ## **Installation**
@@ -41,13 +41,11 @@ python ebay_scraper.py "search term"
 
 This project uses the following third-party libraries:
 
-BeautifulSoup
-requests
-re
-csv
-pandas
-numpy
-time
+requests,
+re,
+pandas,
+numpy,
+time,
 
 ## **Conclusion**
 
