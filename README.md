@@ -25,9 +25,9 @@ Beautifulsoup 4
 
 To install this project, clone this repository to your local machine and install the required packages:
 
-git clone https://github.com/anisha22s/Web-Scraping.git
-cd web-scraping-projects
-pip install -r requirements.txt \
+git clone https://github.com/anisha22s/Web-Scraping.git  
+cd web-scraping-projects  
+pip install -r requirements.txt  
 
 ## **Usage**
 
