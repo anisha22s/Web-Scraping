@@ -34,7 +34,7 @@ pip install -r requirements.txt
 To use any of these projects, navigate to the project directory and run the desired script using Python:
 
 cd web-scraping-projects  
-python ebay_scraper.py "search term"  
+python ebay_scraper.py <search term>  
 
 
 ## **Credits**
