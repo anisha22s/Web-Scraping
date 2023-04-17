@@ -2,7 +2,7 @@
 
 This repository contains multiple web scraping projects built with Python and Beautifulsoup.
 
-Projects
+#Projects
 
 eBay Scraper
 This project contains code to scrape data from eBay.com based on a specific search and download pages from the search results. It also prints to screen the details for each product from the search page.
